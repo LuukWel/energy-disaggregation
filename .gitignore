@@ -1,0 +1,29 @@
+# Python environment and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Packaging
+*.egg-info/
+build/
+dist/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Pipeline output: everything in outputs/ except the placeholder, plus extra
+# runs written to outputs-<name>/
+outputs/*
+!outputs/.gitkeep
+outputs-*/
+
+# Raw Belkin data, downloaded separately (see data/README.md)
+data/*
+!data/README.md
+H*_CSV*/

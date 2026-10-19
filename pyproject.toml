@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nilm-transients"
+version = "0.2.0"
+description = "Appliance classification from smart-meter switching transients (Belkin NILM data)"
+readme = "README.md"
+requires-python = ">=3.12"
+# Only the names here; requirements.txt pins the exact versions of the verified run.
+dependencies = ["numpy", "pandas", "scipy", "scikit-learn"]
+
+[project.optional-dependencies]
+plots = ["matplotlib"]
+dev = ["matplotlib", "pytest"]
+
+[project.scripts]
+nilm = "nilm.pipeline:main"
+
+[tool.setuptools]
+packages = ["nilm"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
